@@ -13,7 +13,7 @@
     <!-- 1. BANNER ATAS -->
     <div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
       <img 
-        src="banner.jpg" 
+        src="banner.png" 
         alt="Banner Festival BTQ Ke-V" 
         class="w-full h-auto object-cover block"
         onerror="this.style.display='none'"
@@ -28,7 +28,7 @@
       </div>
       
       <a 
-        href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit" 
+        href="https://docs.google.com/spreadsheets/d/18alhe8u_EdpFyya6zBXf-B6tbJlQ9zeCUfaTD0Q27qo/edit?usp=sharing" 
         target="_blank" 
         class="inline-flex items-center space-x-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold text-xs px-4 py-2 rounded-lg transition-colors shadow-sm"
       >
@@ -114,7 +114,7 @@
   <!-- 4. FOOTNOTE BERTUMPUK -->
   <footer class="mt-8 text-center text-xs text-slate-500 py-6 border-t border-slate-200 max-w-5xl mx-auto w-full space-y-1.5">
     <p class="font-semibold text-slate-700">Panitia Pelaksana Festival BTQ Ke-V Tahun 2026</p>
-    <p>Kelompok Kerja Guru (KKG) Baca Tulis Al-Qur'an</p>
+    <p>Kelompok Kerja Guru (KKG) BTQ SD Kab. Pasuruan</p>
     <p class="text-[11px] text-slate-400">© 2026 Hak Cipta Dilindungi Undang-Undang.</p>
   </footer>
 
@@ -153,7 +153,7 @@
         </div>
 
         <div>
-          <label id="labelInstansi" class="block text-xs font-bold text-slate-700 mb-1 uppercase">Asal Sekolah / TPQ Utama</label>
+          <label id="labelInstansi" class="block text-xs font-bold text-slate-700 mb-1 uppercase">Asal Sekolah</label>
           <input type="text" id="instansi" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Contoh: SDN / TPQ ...">
         </div>
 
@@ -197,8 +197,8 @@
         <!-- INPUT ANGGOTA AL-BANJARI -->
         <div id="sectionBanjari" class="hidden p-4 bg-emerald-50 rounded-xl border border-emerald-200 space-y-3">
           <div>
-            <h4 class="font-bold text-emerald-900 text-xs uppercase">Daftar Anggota Tim & Asal Lembaga (Maks. 10)</h4>
-            <p class="text-[11px] text-emerald-700">Jika asal TPQ/Sekolah anggota kosong, otomatis menggunakan nama Sekolah/TPQ Utama di atas.</p>
+            <h4 class="font-bold text-emerald-900 text-xs uppercase">Daftar Anggota Tim & Asal Lembaga</h4>
+            <p class="text-[11px] text-emerald-700">Jika asal Sekolah anggota kosong, otomatis menggunakan nama Sekolah Utama di atas.</p>
           </div>
           <div class="space-y-2 max-h-60 overflow-y-auto pr-1" id="containerAnggota"></div>
         </div>
@@ -224,7 +224,7 @@
       div.className = "grid grid-cols-1 sm:grid-cols-2 gap-2 bg-white p-2 rounded-lg border border-emerald-100 shadow-sm";
       div.innerHTML = `
         <input type="text" id="anggota_${i}" placeholder="Nama Anggota ${i}" class="w-full px-2.5 py-1.5 text-xs border rounded-md text-slate-800 outline-none focus:border-emerald-500">
-        <input type="text" id="lembaga_${i}" placeholder="Asal TPQ/Sekolah Anggota ${i}" class="w-full px-2.5 py-1.5 text-xs border rounded-md text-slate-800 outline-none focus:border-emerald-500">
+        <input type="text" id="lembaga_${i}" placeholder="Asal Sekolah Anggota ${i}" class="w-full px-2.5 py-1.5 text-xs border rounded-md text-slate-800 outline-none focus:border-emerald-500">
       `;
       container.appendChild(div);
     }
@@ -242,14 +242,14 @@
       if (cabang === 'Al-Banjari') {
         sectionKategori.classList.add('hidden');
         sectionBanjari.classList.remove('hidden');
-        document.getElementById('labelNama').innerText = 'Nama Group / Tim Al-Banjari';
-        document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ Utama (Basecamp)';
+        document.getElementById('labelNama').innerText = 'Nama Group / KKG BTQ Kecamatan';
+        document.getElementById('labelInstansi').innerText = 'Asal Sekolah';
         document.getElementById('inputCabangLomba').value = 'Al-Banjari';
       } else {
         sectionKategori.classList.remove('hidden');
         sectionBanjari.classList.add('hidden');
         document.getElementById('labelNama').innerText = 'Nama Lengkap Peserta';
-        document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ';
+        document.getElementById('labelInstansi').innerText = 'Asal Sekolah';
         document.getElementById('inputCabangLomba').value = '';
       }
     }
