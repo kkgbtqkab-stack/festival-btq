@@ -29,13 +29,15 @@
     <!-- CONTAINER UTAMA -->
     <main class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950 text-white rounded-2xl shadow-xl p-6 sm:p-8 border border-emerald-800/50 space-y-6">
       <div class="text-center max-w-xl mx-auto space-y-2">
-        <span class="bg-amber-400/20 border border-amber-400/40 text-amber-300 font-bold text-[11px] px-3 py-1 rounded-full tracking-wider uppercase">Pilihan Lomba</span>
+        <span class="bg-amber-400/20 border border-amber-400/40 text-amber-300 font-bold text-[11px] px-3 py-1 rounded-full tracking-wider uppercase">Pilihan Layanan</span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Festival BTQ Ke-V</h2>
-        <p class="text-xs sm:text-sm text-emerald-200/80">Silakan klik salah satu cabang lomba di bawah ini untuk mendaftar.</p>
+        <p class="text-xs sm:text-sm text-emerald-200/80">Silakan pilih cabang lomba untuk mendaftar atau menu unggah berkas di bawah ini.</p>
       </div>
 
-      <!-- GRID CABANG LOMBA -->
+      <!-- GRID CABANG LOMBA & UPLOAD -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+        
+        <!-- Tartil -->
         <div onclick="bukaModal('Tartil Al-Qur\'an')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-emerald-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center justify-center text-xl font-bold">📖</div>
@@ -49,6 +51,7 @@
           </div>
         </div>
 
+        <!-- Tahfidz -->
         <div onclick="bukaModal('Tahfidz Al-Qur\'an')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-amber-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center justify-center text-xl font-bold">⭐</div>
@@ -62,6 +65,7 @@
           </div>
         </div>
 
+        <!-- Kaligrafi -->
         <div onclick="bukaModal('Seni Kaligrafi')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-purple-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center justify-center text-xl font-bold">🎨</div>
@@ -75,6 +79,7 @@
           </div>
         </div>
 
+        <!-- Al-Banjari -->
         <div onclick="bukaModal('Al-Banjari')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-cyan-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 flex items-center justify-center text-xl font-bold">🥁</div>
@@ -87,6 +92,21 @@
             <span>Klik untuk Daftar</span><span>→</span>
           </div>
         </div>
+
+        <!-- KARTU KHUSUS UPLOAD BERKAS & TRANSFER (SENDIRIAN/FULL WIDTH) -->
+        <div onclick="bukaModal('UploadBerkas')" class="group bg-amber-500/20 hover:bg-amber-500/30 border-2 border-amber-400/60 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md sm:col-span-2">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-400 text-amber-950 flex items-center justify-center text-xl font-bold shadow">📤</div>
+            <div>
+              <h3 class="font-bold text-lg text-amber-300 group-hover:text-amber-200 transition-colors">Unggah Bukti Pembayaran & Berkas Scan</h3>
+              <p class="text-xs text-emerald-100/80">Menu khusus untuk mengunggah bukti transfer dan dokumen persyaratkan peserta</p>
+            </div>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-xs font-bold text-amber-300">
+            <span>Klik untuk Masuk Menu Upload</span><span>→</span>
+          </div>
+        </div>
+
       </div>
     </main>
   </div>
@@ -101,9 +121,9 @@
   <div id="modalForm" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden flex flex-col max-h-[90vh]">
       
-      <div class="bg-gradient-to-r from-emerald-900 to-teal-900 text-white p-5 flex justify-between items-center">
+      <div id="modalHeader" class="bg-gradient-to-r from-emerald-900 to-teal-900 text-white p-5 flex justify-between items-center">
         <div>
-          <span class="text-[10px] font-bold text-amber-300 bg-amber-400/20 px-2 py-0.5 rounded uppercase">Formulir Pendaftaran</span>
+          <span id="modalSubJudul" class="text-[10px] font-bold text-amber-300 bg-amber-400/20 px-2 py-0.5 rounded uppercase">Formulir Pendaftaran</span>
           <h3 id="modalJudulCabang" class="text-xl font-extrabold mt-1">Nama Cabang</h3>
         </div>
         <button onclick="tutupModal()" class="text-emerald-200 hover:text-white bg-white/10 rounded-full p-1.5 w-8 h-8 flex items-center justify-center">✕</button>
@@ -112,6 +132,7 @@
       <form id="formPendaftaran" onsubmit="submitForm(event)" class="p-6 space-y-4 overflow-y-auto">
         <input type="hidden" id="inputCabangLomba">
 
+        <!-- KATEGORI GENDER (UNTUK LOMBA INDIVIDU) -->
         <div id="sectionKategori" class="space-y-1.5">
           <label class="block text-xs font-bold text-slate-700 uppercase">Pilih Kategori Kelamin</label>
           <div class="grid grid-cols-2 gap-3">
@@ -126,6 +147,7 @@
           </div>
         </div>
 
+        <!-- INPUT IDENTITAS UMUM -->
         <div>
           <label id="labelNama" class="block text-xs font-bold text-slate-700 mb-1 uppercase">Nama Lengkap Peserta</label>
           <input type="text" id="nama" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
@@ -164,6 +186,7 @@
             <option value="Tutur">Tutur</option>
             <option value="Winongan">Winongan</option>
             <option value="Wonorejo">Wonorejo</option>
+            <option value="Luar Kabupaten">Luar Kabupaten / Lainnya</option>
           </select>
         </div>
 
@@ -172,18 +195,18 @@
           <input type="tel" id="whatsapp" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="08123456789">
         </div>
 
-        <!-- INPUT UNGGAH BERKAS & TRANSFER -->
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-          <h4 class="font-bold text-slate-800 text-xs uppercase">Unggah Dokumen (Opsional / Maks 5MB)</h4>
+        <!-- FORM KHUSUS UPLOAD BERKAS -->
+        <div id="sectionUpload" class="hidden p-4 bg-amber-50 rounded-xl border border-amber-200 space-y-3">
+          <h4 class="font-bold text-amber-900 text-xs uppercase">Unggah Dokumen (Gambar / PDF, Maks. 5MB)</h4>
           
           <div>
-            <label class="block text-[11px] font-semibold text-slate-600 mb-1">Bukti Transfer Pembayaran (JPG/PNG/PDF)</label>
-            <input type="file" id="fileTransfer" accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-100 file:text-emerald-800 hover:file:bg-emerald-200">
+            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Bukti Pembayaran / Transfer</label>
+            <input type="file" id="fileTransfer" accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-100 file:text-amber-900 hover:file:bg-amber-200">
           </div>
 
           <div>
-            <label class="block text-[11px] font-semibold text-slate-600 mb-1">Scan Berkas / Surat Rekomendasi (JPG/PNG/PDF)</label>
-            <input type="file" id="fileBerkas" accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-100 file:text-emerald-800 hover:file:bg-emerald-200">
+            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Scan Berkas Persyaratan / Surat Rekomendasi</label>
+            <input type="file" id="fileBerkas" accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-100 file:text-amber-900 hover:file:bg-amber-200">
           </div>
         </div>
 
@@ -200,7 +223,7 @@
 
         <div class="pt-2 flex gap-3">
           <button type="button" onclick="tutupModal()" class="w-1/3 bg-slate-100 text-slate-700 font-bold py-3 rounded-xl text-xs hover:bg-slate-200">Batal</button>
-          <button type="submit" id="btnSubmit" class="w-2/3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition-colors">Kirim Pendaftaran</button>
+          <button type="submit" id="btnSubmit" class="w-2/3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition-colors">Kirim Data</button>
         </div>
       </form>
     </div>
@@ -223,23 +246,43 @@
 
     function bukaModal(cabang) {
       cabangAktif = cabang;
-      document.getElementById('modalJudulCabang').innerText = cabang;
       document.getElementById('modalForm').classList.remove('hidden');
 
       const sectionKategori = document.getElementById('sectionKategori');
       const sectionBanjari = document.getElementById('sectionBanjari');
+      const sectionUpload = document.getElementById('sectionUpload');
       
       document.querySelectorAll('input[name="kategoriGender"]').forEach(r => r.checked = false);
 
-      if (cabang === 'Al-Banjari') {
+      if (cabang === 'UploadBerkas') {
+        document.getElementById('modalSubJudul').innerText = "Portal Layanan Upload";
+        document.getElementById('modalJudulCabang').innerText = "Unggah Berkas & Bukti Pembayaran";
+        sectionKategori.classList.add('hidden');
+        sectionBanjari.classList.add('hidden');
+        sectionUpload.classList.remove('hidden');
+        
+        document.getElementById('labelNama').innerText = 'Nama Peserta / Nama Tim Al-Banjari';
+        document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ';
+        document.getElementById('inputCabangLomba').value = 'Upload Berkas Pendaftaran';
+      } 
+      else if (cabang === 'Al-Banjari') {
+        document.getElementById('modalSubJudul').innerText = "Formulir Pendaftaran";
+        document.getElementById('modalJudulCabang').innerText = cabang;
         sectionKategori.classList.add('hidden');
         sectionBanjari.classList.remove('hidden');
+        sectionUpload.classList.add('hidden');
+        
         document.getElementById('labelNama').innerText = 'Nama Group / Tim Al-Banjari';
         document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ Utama (Basecamp)';
         document.getElementById('inputCabangLomba').value = 'Al-Banjari';
-      } else {
+      } 
+      else {
+        document.getElementById('modalSubJudul').innerText = "Formulir Pendaftaran";
+        document.getElementById('modalJudulCabang').innerText = cabang;
         sectionKategori.classList.remove('hidden');
         sectionBanjari.classList.add('hidden');
+        sectionUpload.classList.add('hidden');
+        
         document.getElementById('labelNama').innerText = 'Nama Lengkap Peserta';
         document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ';
         document.getElementById('inputCabangLomba').value = '';
@@ -248,7 +291,7 @@
 
     function updateCabangValue() {
       const gender = document.querySelector('input[name="kategoriGender"]:checked')?.value;
-      if (gender && cabangAktif !== 'Al-Banjari') {
+      if (gender && cabangAktif !== 'Al-Banjari' && cabangAktif !== 'UploadBerkas') {
         document.getElementById('inputCabangLomba').value = `${cabangAktif} - ${gender}`;
       }
     }
@@ -259,7 +302,6 @@
       document.getElementById('statusMessage').classList.add('hidden');
     }
 
-    // Helper untuk mengubah File menjadi Base64 string
     function fileToBase64(file) {
       return new Promise((resolve, reject) => {
         if (!file) { resolve(null); return; }
@@ -287,12 +329,17 @@
       const msg = document.getElementById('statusMessage');
       
       btn.disabled = true;
-      btn.innerText = 'Mengirim data & mengunggah file...';
+      btn.innerText = 'Mengirim data...';
       msg.classList.add('hidden');
 
       try {
-        const fileTransferObj = await fileToBase64(document.getElementById('fileTransfer').files[0]);
-        const fileBerkasObj = await fileToBase64(document.getElementById('fileBerkas').files[0]);
+        let fileTransferObj = null;
+        let fileBerkasObj = null;
+
+        if (cabangAktif === 'UploadBerkas') {
+          fileTransferObj = await fileToBase64(document.getElementById('fileTransfer').files[0]);
+          fileBerkasObj = await fileToBase64(document.getElementById('fileBerkas').files[0]);
+        }
 
         const instansiUtama = document.getElementById('instansi').value;
         let listAnggota = [];
@@ -329,18 +376,18 @@
         })
         .then(() => {
           btn.disabled = false;
-          btn.innerText = 'Kirim Pendaftaran';
+          btn.innerText = 'Kirim Data';
           msg.className = "p-3 rounded-lg text-xs font-medium bg-emerald-100 text-emerald-800 border border-emerald-300";
-          msg.innerText = "Pendaftaran Berhasil Dikirim!";
+          msg.innerText = "Data Berhasil Dikirim!";
           msg.classList.remove('hidden');
           setTimeout(() => { tutupModal(); }, 2000);
         });
 
       } catch (err) {
         btn.disabled = false;
-        btn.innerText = 'Kirim Pendaftaran';
+        btn.innerText = 'Kirim Data';
         msg.className = "p-3 rounded-lg text-xs font-medium bg-red-100 text-red-800 border border-red-300";
-        msg.innerText = "Gagal memproses file. Pastikan ukuran file tidak melebihi 5MB.";
+        msg.innerText = "Gagal mengirim file. Pastikan ukuran file di bawah 5MB.";
         msg.classList.remove('hidden');
       }
     }
