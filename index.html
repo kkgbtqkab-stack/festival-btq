@@ -10,47 +10,32 @@
 
   <div class="max-w-5xl mx-auto w-full space-y-5">
     
-    <!-- 1. BANNER ATAS -->
+    <!-- BANNER ATAS -->
     <div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-      <img 
-        src="banner.png" 
-        alt="Banner Festival BTQ Ke-V" 
-        class="w-full h-auto object-cover block"
-        onerror="this.style.display='none'"
-      >
+      <img src="banner.jpg" alt="Banner Festival BTQ Ke-V" class="w-full h-auto object-cover block" onerror="this.style.display='none'">
     </div>
 
-    <!-- 2. NAVBAR ATAS -->
+    <!-- NAVBAR ATAS -->
     <header class="bg-white rounded-xl shadow-sm p-4 border border-slate-200 flex flex-wrap justify-between items-center gap-3">
       <div class="flex items-center space-x-3">
         <span class="bg-emerald-600 text-white font-black text-xs px-3 py-1.5 rounded-lg shadow-sm">FESTIVAL BTQ V</span>
         <span class="font-bold text-slate-800 text-sm hidden sm:inline">Portal Pendaftaran Resmi</span>
       </div>
-      
-      <a 
-        href="https://docs.google.com/spreadsheets/d/18alhe8u_EdpFyya6zBXf-B6tbJlQ9zeCUfaTD0Q27qo/edit?usp=sharing" 
-        target="_blank" 
-        class="inline-flex items-center space-x-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold text-xs px-4 py-2 rounded-lg transition-colors shadow-sm"
-      >
-        <span>📊</span>
-        <span>Lihat Hasil Input</span>
+      <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold text-xs px-4 py-2 rounded-lg transition-colors shadow-sm">
+        <span>📊</span><span>Lihat Hasil Input</span>
       </a>
     </header>
 
-    <!-- 3. CONTAINER UTAMA -->
+    <!-- CONTAINER UTAMA -->
     <main class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950 text-white rounded-2xl shadow-xl p-6 sm:p-8 border border-emerald-800/50 space-y-6">
       <div class="text-center max-w-xl mx-auto space-y-2">
-        <span class="bg-amber-400/20 border border-amber-400/40 text-amber-300 font-bold text-[11px] px-3 py-1 rounded-full tracking-wider uppercase">
-          Pilihan Lomba
-        </span>
+        <span class="bg-amber-400/20 border border-amber-400/40 text-amber-300 font-bold text-[11px] px-3 py-1 rounded-full tracking-wider uppercase">Pilihan Lomba</span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Festival BTQ Ke-V</h2>
         <p class="text-xs sm:text-sm text-emerald-200/80">Silakan klik salah satu cabang lomba di bawah ini untuk mendaftar.</p>
       </div>
 
       <!-- GRID CABANG LOMBA -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-        
-        <!-- Tartil -->
         <div onclick="bukaModal('Tartil Al-Qur\'an')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-emerald-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center justify-center text-xl font-bold">📖</div>
@@ -64,7 +49,6 @@
           </div>
         </div>
 
-        <!-- Tahfidz -->
         <div onclick="bukaModal('Tahfidz Al-Qur\'an')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-amber-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center justify-center text-xl font-bold">⭐</div>
@@ -78,7 +62,6 @@
           </div>
         </div>
 
-        <!-- Kaligrafi -->
         <div onclick="bukaModal('Seni Kaligrafi')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-purple-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center justify-center text-xl font-bold">🎨</div>
@@ -92,7 +75,6 @@
           </div>
         </div>
 
-        <!-- Al-Banjari -->
         <div onclick="bukaModal('Al-Banjari')" class="group bg-white/10 hover:bg-white/15 border border-white/15 hover:border-cyan-400 p-5 rounded-2xl cursor-pointer transition-all duration-300 shadow-md">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 flex items-center justify-center text-xl font-bold">🥁</div>
@@ -105,16 +87,13 @@
             <span>Klik untuk Daftar</span><span>→</span>
           </div>
         </div>
-
       </div>
     </main>
-
   </div>
 
-  <!-- 4. FOOTNOTE BERTUMPUK -->
   <footer class="mt-8 text-center text-xs text-slate-500 py-6 border-t border-slate-200 max-w-5xl mx-auto w-full space-y-1.5">
     <p class="font-semibold text-slate-700">Panitia Pelaksana Festival BTQ Ke-V Tahun 2026</p>
-    <p>Kelompok Kerja Guru (KKG) BTQ SD Kab. Pasuruan</p>
+    <p>Kelompok Kerja Guru (KKG) Baca Tulis Al-Qur'an</p>
     <p class="text-[11px] text-slate-400">© 2026 Hak Cipta Dilindungi Undang-Undang.</p>
   </footer>
 
@@ -149,15 +128,14 @@
 
         <div>
           <label id="labelNama" class="block text-xs font-bold text-slate-700 mb-1 uppercase">Nama Lengkap Peserta</label>
-          <input type="text" id="nama" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Masukkan nama">
+          <input type="text" id="nama" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
         </div>
 
         <div>
-          <label id="labelInstansi" class="block text-xs font-bold text-slate-700 mb-1 uppercase">Asal Sekolah</label>
-          <input type="text" id="instansi" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Contoh: SDN / TPQ ...">
+          <label id="labelInstansi" class="block text-xs font-bold text-slate-700 mb-1 uppercase">Asal Sekolah / TPQ Utama</label>
+          <input type="text" id="instansi" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
         </div>
 
-        <!-- DROPDOWN KECAMATAN -->
         <div>
           <label class="block text-xs font-bold text-slate-700 mb-1 uppercase">Kecamatan</label>
           <select id="kecamatan" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none bg-white">
@@ -169,23 +147,21 @@
             <option value="Grati">Grati</option>
             <option value="Kejayan">Kejayan</option>
             <option value="Kraton">Kraton</option>
-            <option value="Lekok">Lekok</option>
             <option value="Lumbang">Lumbang</option>
             <option value="Nguling">Nguling</option>
             <option value="Pandaan">Pandaan</option>
             <option value="Pasrepan">Pasrepan</option>
             <option value="Pohjentrek">Pohjentrek</option>
             <option value="Prigen">Prigen</option>
-            <option value="Purwodadi">Purwodadi</option>
             <option value="Purwosari">Purwosari</option>
-            <option value="Puspo">Puspo</option>
+            <option value="Purwodadi">Purwodadi</option>
             <option value="Rejoso">Rejoso</option>
             <option value="Rembang">Rembang</option>
             <option value="Sukorejo">Sukorejo</option>
             <option value="Tosari">Tosari</option>
             <option value="Tutur">Tutur</option>
             <option value="Winongan">Winongan</option>
-            <option value="Wonorejo">Wonorejo</option>
+            <option value="Luar Kabupaten">Luar Kabupaten / Lainnya</option>
           </select>
         </div>
 
@@ -194,11 +170,26 @@
           <input type="tel" id="whatsapp" required class="w-full px-4 py-2.5 border rounded-lg text-sm text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="08123456789">
         </div>
 
+        <!-- INPUT UNGGAH BERKAS & TRANSFER -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+          <h4 class="font-bold text-slate-800 text-xs uppercase">Unggah Dokumen (Opsional / Maks 5MB)</h4>
+          
+          <div>
+            <label class="block text-[11px] font-semibold text-slate-600 mb-1">Bukti Transfer Pembayaran (JPG/PNG/PDF)</label>
+            <input type="file" id="fileTransfer" accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-100 file:text-emerald-800 hover:file:bg-emerald-200">
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-slate-600 mb-1">Scan Berkas / Surat Rekomendasi (JPG/PNG/PDF)</label>
+            <input type="file" id="fileBerkas" accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-100 file:text-emerald-800 hover:file:bg-emerald-200">
+          </div>
+        </div>
+
         <!-- INPUT ANGGOTA AL-BANJARI -->
         <div id="sectionBanjari" class="hidden p-4 bg-emerald-50 rounded-xl border border-emerald-200 space-y-3">
           <div>
-            <h4 class="font-bold text-emerald-900 text-xs uppercase">Daftar Anggota Tim & Asal Lembaga</h4>
-            <p class="text-[11px] text-emerald-700">Jika asal Sekolah anggota kosong, otomatis menggunakan nama Sekolah Utama di atas.</p>
+            <h4 class="font-bold text-emerald-900 text-xs uppercase">Daftar Anggota Tim & Asal Lembaga (Maks. 10)</h4>
+            <p class="text-[11px] text-emerald-700">Jika asal TPQ/Sekolah anggota kosong, otomatis menggunakan nama Sekolah/TPQ Utama di atas.</p>
           </div>
           <div class="space-y-2 max-h-60 overflow-y-auto pr-1" id="containerAnggota"></div>
         </div>
@@ -214,8 +205,7 @@
   </div>
 
   <script>
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzDV3O8OPRzT_6tn_NSEcvihUkwKoI4v1fpDEIdQg7dif0E-Pb7J-XpPDh7VUtM-IWF/exec";
-
+    const WEB_APP_URL = "PASTE_URL_WEB_APP_ANDA_DISINI";
     let cabangAktif = '';
 
     const container = document.getElementById('containerAnggota');
@@ -224,7 +214,7 @@
       div.className = "grid grid-cols-1 sm:grid-cols-2 gap-2 bg-white p-2 rounded-lg border border-emerald-100 shadow-sm";
       div.innerHTML = `
         <input type="text" id="anggota_${i}" placeholder="Nama Anggota ${i}" class="w-full px-2.5 py-1.5 text-xs border rounded-md text-slate-800 outline-none focus:border-emerald-500">
-        <input type="text" id="lembaga_${i}" placeholder="Asal Sekolah Anggota ${i}" class="w-full px-2.5 py-1.5 text-xs border rounded-md text-slate-800 outline-none focus:border-emerald-500">
+        <input type="text" id="lembaga_${i}" placeholder="Asal TPQ/Sekolah Anggota ${i}" class="w-full px-2.5 py-1.5 text-xs border rounded-md text-slate-800 outline-none focus:border-emerald-500">
       `;
       container.appendChild(div);
     }
@@ -242,14 +232,14 @@
       if (cabang === 'Al-Banjari') {
         sectionKategori.classList.add('hidden');
         sectionBanjari.classList.remove('hidden');
-        document.getElementById('labelNama').innerText = 'Nama Group / KKG BTQ Kecamatan';
-        document.getElementById('labelInstansi').innerText = 'Asal Sekolah';
+        document.getElementById('labelNama').innerText = 'Nama Group / Tim Al-Banjari';
+        document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ Utama (Basecamp)';
         document.getElementById('inputCabangLomba').value = 'Al-Banjari';
       } else {
         sectionKategori.classList.remove('hidden');
         sectionBanjari.classList.add('hidden');
         document.getElementById('labelNama').innerText = 'Nama Lengkap Peserta';
-        document.getElementById('labelInstansi').innerText = 'Asal Sekolah';
+        document.getElementById('labelInstansi').innerText = 'Asal Sekolah / TPQ';
         document.getElementById('inputCabangLomba').value = '';
       }
     }
@@ -267,7 +257,22 @@
       document.getElementById('statusMessage').classList.add('hidden');
     }
 
-    function submitForm(e) {
+    // Helper untuk mengubah File menjadi Base64 string
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        if (!file) { resolve(null); return; }
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve({
+          base64: reader.result.split(',')[1],
+          name: file.name,
+          type: file.type
+        });
+        reader.onerror = error => reject(error);
+      });
+    }
+
+    async function submitForm(e) {
       e.preventDefault();
       
       const cabangVal = document.getElementById('inputCabangLomba').value;
@@ -280,56 +285,62 @@
       const msg = document.getElementById('statusMessage');
       
       btn.disabled = true;
-      btn.innerText = 'Mengirim data...';
+      btn.innerText = 'Mengirim data & mengunggah file...';
       msg.classList.add('hidden');
 
-      const instansiUtama = document.getElementById('instansi').value;
-      let listAnggota = [];
+      try {
+        const fileTransferObj = await fileToBase64(document.getElementById('fileTransfer').files[0]);
+        const fileBerkasObj = await fileToBase64(document.getElementById('fileBerkas').files[0]);
 
-      if(cabangAktif === 'Al-Banjari') {
-        for(let i=1; i<=10; i++) {
-          let namaVal = document.getElementById(`anggota_${i}`).value.trim();
-          let lembagaVal = document.getElementById(`lembaga_${i}`).value.trim();
-          
-          if(namaVal !== "") {
-            listAnggota.push({
-              nama: namaVal,
-              lembaga: lembagaVal !== "" ? lembagaVal : instansiUtama
-            });
+        const instansiUtama = document.getElementById('instansi').value;
+        let listAnggota = [];
+
+        if(cabangAktif === 'Al-Banjari') {
+          for(let i=1; i<=10; i++) {
+            let namaVal = document.getElementById(`anggota_${i}`).value.trim();
+            let lembagaVal = document.getElementById(`lembaga_${i}`).value.trim();
+            if(namaVal !== "") {
+              listAnggota.push({
+                nama: namaVal,
+                lembaga: lembagaVal !== "" ? lembagaVal : instansiUtama
+              });
+            }
           }
         }
-      }
 
-      const payload = {
-        nama: document.getElementById('nama').value,
-        instansi: instansiUtama,
-        kecamatan: document.getElementById('kecamatan').value,
-        whatsapp: document.getElementById('whatsapp').value,
-        cabangLomba: cabangVal,
-        anggota: listAnggota
-      };
+        const payload = {
+          nama: document.getElementById('nama').value,
+          instansi: instansiUtama,
+          kecamatan: document.getElementById('kecamatan').value,
+          whatsapp: document.getElementById('whatsapp').value,
+          cabangLomba: cabangVal,
+          anggota: listAnggota,
+          fileTransfer: fileTransferObj,
+          fileBerkas: fileBerkasObj
+        };
 
-      fetch(WEB_APP_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-      .then(() => {
-        btn.disabled = false;
-        btn.innerText = 'Kirim Pendaftaran';
-        msg.className = "p-3 rounded-lg text-xs font-medium bg-emerald-100 text-emerald-800 border border-emerald-300";
-        msg.innerText = "Pendaftaran Berhasil Dikirim!";
-        msg.classList.remove('hidden');
-        setTimeout(() => { tutupModal(); }, 2000);
-      })
-      .catch(error => {
+        fetch(WEB_APP_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(() => {
+          btn.disabled = false;
+          btn.innerText = 'Kirim Pendaftaran';
+          msg.className = "p-3 rounded-lg text-xs font-medium bg-emerald-100 text-emerald-800 border border-emerald-300";
+          msg.innerText = "Pendaftaran Berhasil Dikirim!";
+          msg.classList.remove('hidden');
+          setTimeout(() => { tutupModal(); }, 2000);
+        });
+
+      } catch (err) {
         btn.disabled = false;
         btn.innerText = 'Kirim Pendaftaran';
         msg.className = "p-3 rounded-lg text-xs font-medium bg-red-100 text-red-800 border border-red-300";
-        msg.innerText = "Gagal mengirim data. Coba lagi.";
+        msg.innerText = "Gagal memproses file. Pastikan ukuran file tidak melebihi 5MB.";
         msg.classList.remove('hidden');
-      });
+      }
     }
   </script>
 </body>
